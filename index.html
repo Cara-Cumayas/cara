@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Freeman&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"  rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+      
+        <div class="nav-bar">
+            <p>MyPortfolio</p>
+            <div class="hamburger-menu" id="hamburger-menu">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Home Section -->
+        <section id="home" class="body">
+            <div class="image-me">
+                <img src="cara.jpg" alt="a photo of me">
+                <div class="text--in">
+                    <h1>Hello,</h1>
+                    <h1>I'm Cara Jean B. Cumayas</h1>
+                    <p>Bachelor Of Science in Information Technology</p>
+                </div>      
+            </div>
+        </section>
+        
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>
+                I am Cara Jean Bonocan Cumayas a 3rd year student taking up Bachelor of Science in Information Technology
+                 studying at Negros Oriental State University,  and I am passionate about creating visually 
+                 appealing and user-friendly web experiences. 
+            </p><br><br><br>
+           
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h1>Contact Me</h1>
+            
+            <div class="contact-icons">
+                <a href="https://www.facebook.com/carajean.bonocan.cumayas?mibextid=ZbWKwL" target="_blank" class="contact-icon">
+                    <img src="facebook-icon.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcarajeann_%3Figsh%3DMWlwMGt3ejE4d3J6OQ%253D%253D%26fbclid%3DIwZXh0bgNhZW0CMTAAAR1ncLIQM7zq3nSNp3xhAxYO4GtkBSObuhRZk2gy-t3ucANxjNKebZ9A5Ls_aem_t2YDXzX2e4O6J6iKJ3i3rA&h=AT3Qg6AyPCs3Zde5OfUxMbM_MBWjQUxrbjJoJZ3nBOO1wD6bQaCC_tqjKpZCRpmQVu33QcJiEcTZ7Rs8tLPKsG44ewkMrQexYZfqedK6soDjaNIdYQdzfklaJoyFlsFL4MEQ-cPgtzSvdREqZ10Neg" target="_blank" class="contact-icon">
+                    <img src="instagram-icon.png" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="carajeancumayas26@gmail.com" class="contact-icon">
+                    <img src="gmail-icon.png" alt="Gmail">
+                    <span>Email</span>
+                </a>
+                <a href="tel:09692036656" class="contact-icon">
+                    <img src="telephone-icon.png" alt="Telephone">
+                    <span>Phone</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Hamburger menu toggle
+        const menuToggle = document.querySelector('#hamburger-menu');
+        const navLinks = document.querySelector('#nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
